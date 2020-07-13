@@ -1,0 +1,56 @@
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-n9nxq[0m
+{"level":"info","ts":1594680538.7360227,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1594680538.736473,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6l25v[0m
+{"level":"info","ts":1594680540.0630271,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1594680540.067776,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-my-buildpack-master-qcnkk-4zcdf[0m
+{"level":"info","ts":1594680550.1904671,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1594680550.6442945,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/my-buildpack.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0713 22:49:13.015687      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Retrieving image manifest busybox:latest     
+E0713 22:49:13.295249      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0713 22:49:13.298832      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest busybox:latest     
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest busybox:latest     
+[36mINFO[0m[0003] Retrieving image manifest busybox:latest     
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] CMD ["date"]                                 
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mhgautam-my-buildpack-master-qcnkk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source to an unshallow repository
+Generating change log from git ref 7c4eba1015e55431ffd991467dd3e9755f774cec => a73cf657005aa9a1bfd227a3804f2fa5edbadcdc
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit d3884d756c3c8a1abe2f74a7fac9919cec2cefbb with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: Failed to enrich commit 805312601974ac19754fd4be4298037e461ff0b1 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 805312601974ac19754fd4be4298037e461ff0b1 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 8127de51c1d4c2471d6e0d020959f1b3364586d4 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 8127de51c1d4c2471d6e0d020959f1b3364586d4 with issues: users.jenkins.io "x-0" already exists
+WARNING: No release found for *******/my-buildpack and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*******/my-buildpack/releases/tag/v0.0.1
+generated: /workspace/source/templates/release.yaml
+Created Release my-buildpack-0-0-1 resource in namespace **
+Updating PipelineActivity *******-my-buildpack-master-1 with version 0.0.1
+Updated PipelineActivities *******-my-buildpack-master-1 with release notes URL: https://github.com/*******/my-buildpack/releases/tag/v0.0.1
